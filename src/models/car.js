@@ -18,7 +18,7 @@ const carSchema = mongoose.Schema({
         required: true
     },
     tenaga: {
-        type: String,
+        type: Number,
         required: true
     },
     tempat_duduk: {

@@ -31,7 +31,7 @@ router.post('/', uploadIMG.singleUpload, async (req, res) => {
         tenaga: req.body.tenaga,
         tempat_duduk: req.body.tempat_duduk,
         jenis_transmisi: req.body.jenis_transmisi,
-        gambar: req.body.image
+        gambar: req.body.gambar
     })
 
     try {
@@ -44,6 +44,7 @@ router.post('/', uploadIMG.singleUpload, async (req, res) => {
 })
 
 router.patch('/:id', uploadIMG.singleUpload, async (req, res) => {
+    console.log(req.body)
     try {
         const update = await Car.updateOne(
             {_id: req.params.id},

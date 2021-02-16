@@ -40,7 +40,7 @@ const uploadImg = {
         });
       } else {
         try {
-          req.body.image = req.file.filename;
+          req.body.gambar = req.file.filename;
         } catch {
           err;
         } finally {
