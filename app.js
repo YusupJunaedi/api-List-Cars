@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(logger("dev"));
 app.use(cors())
 
-app.use('/post', postRouter)
+app.use('/car', postRouter)
 
 app.get('/', (req, res) => {
     res.send('Hallo Nendy happy hacking')
