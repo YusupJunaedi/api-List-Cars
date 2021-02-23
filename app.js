@@ -7,6 +7,7 @@ require('dotenv/config')
 const app = express()
 
 const postRouter = require('./src/routes/car')
+const motorRouter = require('./src/routes/motor')
 
 app.use(express.static('public'))
 app.use(bodyParser.json())
@@ -15,10 +16,8 @@ app.use(logger("dev"));
 app.use(cors())
 
 app.use('/car', postRouter)
+app.use('/motor', motorRouter)
 
-app.get('/', (req, res) => {
-    res.send('Hallo Nendy happy hacking')
-})
 
 mongoose.connect(process.env.DB_CONNECTION,{useNewUrlParser: true, useUnifiedTopology: true}, () => {
     console.log('connect to DB!')
